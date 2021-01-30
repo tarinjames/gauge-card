@@ -26,7 +26,7 @@ Adapted from https://github.com/custom-cards/gauge-card.
 
 Severity object
 
-| Name | Colour | Default | Description
+| Name | Type | Default | Description
 | ---- | ---- | ------- | -----------
 | style | number | **Required** | a colour name / number (see examples)
 | value | number | **Required** | Value from which to start specified color
