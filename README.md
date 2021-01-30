@@ -30,7 +30,7 @@ Severity object
 
 **Example**
 
-Using many differebt colour specifications and levels
+Using many different colour specifications and levels
 ```yaml
       - entity: input_number.slider1
         measurement: ' '
