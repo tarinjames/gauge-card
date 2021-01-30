@@ -1,7 +1,8 @@
 # Gauge card
 
 A simple gauge implemented in CSS based on https://github.com/JohnrBell/Gauge_CSS.
-Adapted from https://github.com/custom-cards/gauge-card
+
+Adapted from https://github.com/custom-cards/gauge-card.
 
 ![gauge-card](https://user-images.githubusercontent.com/7738048/42317998-73070c5e-8056-11e8-8621-49c61b5b7be5.gif)
 
