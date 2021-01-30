@@ -35,31 +35,31 @@ Severity object
 
 Using many different colour specifications and levels
 ```yaml
-      - entity: input_number.slider1
-        measurement: ' '
-        severity:
-          - style: 'rgb(255,12,12)'
-            value: 10
-          - style: orange
-            value: 20
-          - style: '#ffff00'
-            value: 30
-          - style: var(--my-green)
-            value: 40
-          - style: blue
-            value: 50
-          - style: indigo
-            value: 60
-          - style: violet
-            value: 70
-          - style: pink
-            value: 80
-          - style: cyan
-            value: 90
-          - style: white
-            value: 100
-        title: Custom gauge
-        type: 'custom:gauge-card'
+type: 'custom:gauge-card'
+title: Custom gauge
+entity: sensor.airq_index
+measurement: 'idx'
+severity:
+  - style: 'rgb(255,12,12)'
+    value: 10
+  - style: orange
+    value: 20
+  - style: '#ffff00'
+    value: 30
+  - style: var(--my-green)
+    value: 40
+  - style: blue
+    value: 50
+  - style: indigo
+    value: 60
+  - style: violet
+    value: 70
+  - style: pink
+    value: 80
+  - style: cyan
+    value: 90
+  - style: white
+    value: 100
 ```
 
 Simple one
