@@ -10,7 +10,7 @@ Adapted from https://github.com/custom-cards/gauge-card.
 
 
 
-**Options**
+## **Options**
 
 | Name | Type | Default | Description
 | ---- | ---- | ------- | -----------
@@ -31,7 +31,9 @@ Severity object
 | style | number | **Required** | a colour name / number (see examples)
 | value | number | **Required** | Value from which to start specified color
 
-**Example**
+## **Examples**
+
+Ready for pasting into the UI Manual card
 
 Using many different colour specifications and levels
 ```yaml
@@ -64,22 +66,22 @@ severity:
 
 Simple one
 ```yaml
-- type: custom:gauge-card
-  entity: sensor.my_oil_sensor
-  scale: 100px
+type: custom:gauge-card
+entity: sensor.my_oil_sensor
+scale: 100px
 ```
 
 Using an attribute
 ```yaml
-- type: custom:gauge-card
-  entity: climate.living_room
-  attribute: current_temperature
+type: custom:gauge-card
+entity: climate.living_room
+attribute: current_temperature
 ```
 
 Using an attribute with dot notation
 ```yaml
-- type: custom:gauge-card
-  entity: climate.living_room.current_temperature
+type: custom:gauge-card
+entity: climate.living_room.current_temperature
 ```
 
 ## Credits
