@@ -23,30 +23,40 @@ A simple gauge implemented in CSS based on https://github.com/JohnrBell/Gauge_CS
 
 Severity object
 
-| Name | Type | Default | Description
+| Name | Colour | Default | Description
 | ---- | ---- | ------- | -----------
-| red | number | **Required** | Value from which to start red color
-| green | number | **Required** | Value from which to start green color
-| amber | number | **Required** | Value from which to start amber color
+| style | number | **Required** | a colour name / number (see examples)
+| value | number | **Required** | Value from which to start specified color
 
 **Example**
 
-Using two with stack
+Using many differebt colour specifications and levels
 ```yaml
-- type: horizontal-stack
-  cards:
-    - type: custom:gauge-card
-      title: Temperature
-      entity: sensor.random_temperature
-      min: -20
-      max: 35
-    - type: custom:gauge-card
-      title: Oil
-      entity: sensor.my_oil_sensor
-      severity:
-        red: 50
-        green: 0
-        amber: 40
+      - entity: input_number.slider1
+        measurement: ' '
+        severity:
+          - style: 'rgb(255,12,12)'
+            value: 10
+          - style: orange
+            value: 20
+          - style: '#ffff00'
+            value: 30
+          - style: var(--my-green)
+            value: 40
+          - style: blue
+            value: 50
+          - style: indigo
+            value: 60
+          - style: violet
+            value: 70
+          - style: pink
+            value: 80
+          - style: cyan
+            value: 90
+          - style: white
+            value: 100
+        title: Custom gauge
+        type: 'custom:gauge-card'
 ```
 
 Simple one
