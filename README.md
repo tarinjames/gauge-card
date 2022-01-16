@@ -2,12 +2,15 @@
 
 A simple gauge implemented in CSS based on https://github.com/JohnrBell/Gauge_CSS.
 
+Adapted from https://github.com/custom-cards/gauge-card.
+
 ![gauge-card](https://user-images.githubusercontent.com/7738048/42317998-73070c5e-8056-11e8-8621-49c61b5b7be5.gif)
 
 ![bedroom-temperature](https://user-images.githubusercontent.com/7738048/42344596-806b4a82-80a5-11e8-8e92-9077ad749dfe.gif)
 
 
-**Options**
+
+## **Options**
 
 | Name | Type | Default | Description
 | ---- | ---- | ------- | -----------
@@ -25,48 +28,60 @@ Severity object
 
 | Name | Type | Default | Description
 | ---- | ---- | ------- | -----------
-| red | number | **Required** | Value from which to start red color
-| green | number | **Required** | Value from which to start green color
-| amber | number | **Required** | Value from which to start amber color
+| style | number | **Required** | a colour name / number (see examples)
+| value | number | **Required** | Value from which to start specified color
 
-**Example**
+## **Examples**
 
-Using two with stack
+Ready for pasting into the UI Manual card
+
+Using many different colour specifications and levels
 ```yaml
-- type: horizontal-stack
-  cards:
-    - type: custom:gauge-card
-      title: Temperature
-      entity: sensor.random_temperature
-      min: -20
-      max: 35
-    - type: custom:gauge-card
-      title: Oil
-      entity: sensor.my_oil_sensor
-      severity:
-        red: 50
-        green: 0
-        amber: 40
+type: 'custom:gauge-card'
+title: Custom gauge
+entity: sensor.airq_index
+measurement: 'idx'
+severity:
+  - style: 'rgb(255,12,12)'
+    value: 10
+  - style: orange
+    value: 20
+  - style: '#ffff00'
+    value: 30
+  - style: var(--my-green)
+    value: 40
+  - style: blue
+    value: 50
+  - style: indigo
+    value: 60
+  - style: violet
+    value: 70
+  - style: pink
+    value: 80
+  - style: cyan
+    value: 90
+  - style: white
+    value: 100
 ```
 
 Simple one
 ```yaml
-- type: custom:gauge-card
-  entity: sensor.my_oil_sensor
-  scale: 100px
+type: custom:gauge-card
+entity: sensor.my_oil_sensor
+scale: 100px
 ```
 
 Using an attribute
 ```yaml
-- type: custom:gauge-card
-  entity: climate.living_room
-  attribute: current_temperature
+type: custom:gauge-card
+entity: climate.living_room
+attribute: current_temperature
 ```
 
 Using an attribute with dot notation
 ```yaml
-- type: custom:gauge-card
-  entity: climate.living_room.current_temperature
+type: custom:gauge-card
+entity: climate.living_room.current_temperature
 ```
 
 ## Credits
